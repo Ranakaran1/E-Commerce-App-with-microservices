@@ -48,6 +48,7 @@ class ProductServicesApplicationTests {
 			.body("id",Matchers.notNullValue())
 			.body("name", Matchers.equalTo("iPhone 15"))
 			.body("description", Matchers.equalTo("iPhone 15 is a smartphone from Apple"))
+			.body("price", Matchers.equalTo(1000));
 	}
 
 }
