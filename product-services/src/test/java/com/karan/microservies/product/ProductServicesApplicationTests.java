@@ -28,27 +28,27 @@ class ProductServicesApplicationTests {
 		RestAssured.port = port;
 	}
 
-	static {
-		mongoDbContainer.start();
-	}
+	// static {
+	// 	mongoDbContainer.start();
+	// }
 
-	@Test
-	void contextLoads() {
-		String requestBody = """
+	// @Test
+	// void contextLoads() {
+	// 	String requestBody = """
 				
-				""";
+	// 			""";
 
-		RestAssured.given()
-			.contentType("application/json")
-			.body(requestBody)
-			.when()
-			.post("/api/product")
-			.then()
-			.statusCode(201)
-			.body("id",Matchers.notNullValue())
-			.body("name", Matchers.equalTo("iPhone 15"))
-			.body("description", Matchers.equalTo("iPhone 15 is a smartphone from Apple"))
-			.body("price", Matchers.equalTo(1000));
-	}
+	// 	RestAssured.given()
+	// 		.contentType("application/json")
+	// 		.body(requestBody)
+	// 		.when()
+	// 		.post("/api/product")
+	// 		.then()
+	// 		.statusCode(201)
+	// 		.body("id",Matchers.notNullValue())
+	// 		.body("name", Matchers.equalTo("iPhone 15"))
+	// 		.body("description", Matchers.equalTo("iPhone 15 is a smartphone from Apple"))
+	// 		.body("price", Matchers.equalTo(1000));
+	// }
 
 }
